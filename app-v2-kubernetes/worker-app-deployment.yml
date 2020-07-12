@@ -8,7 +8,7 @@ metadata:
 spec:
 
   replicas: 1
-  selectors:
+  selector:
     matchLabels:
       name: worker-app-pod
       app: demo-voting-app

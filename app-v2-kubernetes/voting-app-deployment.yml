@@ -10,7 +10,6 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      labels:
         name: voting-app-pod
         app: demo-voting-app
 
