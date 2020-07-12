@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-app-pod
+  labels:
+    name: worker-app-pod
+    app: demo-voting-app
+spec:
+  containers:
+    - name: worker-app
+      image: dockersamples/examplevotingapp_worker
+
+
+
+
+
+#STEPS
+
+1.GKE ENCIRONMENT
+2.KUBERNETES PODS
+3.CLUSTER IP - INTERNAL SERVICE
+4.CREATE SERVICES - EXTERNAL
