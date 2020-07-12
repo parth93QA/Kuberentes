@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23cb39c2-ec4a-40f5-acd2-3ce65de2972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/voting-app/postgres-pod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/voting-app/postgres-pod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/postgres-deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/postgres-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/redis-deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/redis-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/result-app-deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/result-app-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/voting-app-deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/voting-app-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/worker-app-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +30,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/voting-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app-v2-kubernetes" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app-v2-kubernetes" />
       <recent name="$PROJECT_DIR$/voting-app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -46,6 +56,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Notifications" timestamp="1594574833905">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1594574833905" />
+    <state x="421" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594578631240">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594578631240" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1594387302735">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
