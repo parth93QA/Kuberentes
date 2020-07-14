@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23cb39c2-ec4a-40f5-acd2-3ce65de2972e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/postgres-deployment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/postgres-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/redis-deployment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/redis-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/result-app-deployment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/result-app-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/voting-app-deployment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/voting-app-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-v2-kubernetes/worker-app-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,10 +59,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1594387302735" />
-    <state x="413" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1594542947544">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="413" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1594707205356">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1594408758914" />
+    <state x="413" y="281" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1594707205355" />
     <state x="413" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1594542947544" />
   </component>
 </project>
