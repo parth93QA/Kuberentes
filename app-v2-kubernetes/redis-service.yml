@@ -12,3 +12,18 @@ spec:
   selector:
       name: redis-pod
       app: demo-voting-app
+
+
+
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: elephant
+#
+#spec:
+#  containers:
+#    - name: elephant-container
+#      image: polinux/stress
+#      resources:
+#        limit:
+#           memory: "20Mi"

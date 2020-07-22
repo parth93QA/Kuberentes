@@ -1,0 +1,40 @@
+# Base Image as JavaJDK:1.8
+
+FROM anapsix/alpine-java:8_jdk 
+
+MAINTAINER partha.talukdar@vantagecircle.com
+
+ENV PROJECT_WORKPLACE /usr/src/
+
+RUN mkdir -p $PROJECT_WORKPLACE/activator $PROJECT_WORKPLACE/build $PROJECT_WORKPLACE/app
+
+WORKDIR $PROJECT_WORKPLACE/activator
+
+# Fetch Activator for Play
+
+RUN wget http://downloads.typesafe.com/typesafe-activator/1.3.2/typesafe-activator-1.3.2.zip && \
+    unzip typesafe-activator-1.3.2.zip
+
+ENV PATH $PROJECT_WORKPLACE/activator/activator-1.3.2:$PATH
+
+# Copy Files to Docker Container
+
+COPY ./vantagecircle $PROJECT_WORKPLACE/build
+
+COPY ./Rep /root/.sbt/
+
+WORKDIR $PROJECT_WORKPLACE/build
+
+RUN activator clean stage
+
+#RUN activator compile
+
+RUN cp -R $PROJECT_WORKPLACE/build/target/universal/stage $PROJECT_WORKPLACE/app
+
+EXPOSE 9000
+
+# This Runs with docker run
+
+CMD $PROJECT_WORKPLACE/app/stage/bin/vantagecircle -Dhttp.port=9000 -Dlogger.file=$PROJECT_WORKPLACE/build/conf/Logger/logger.xml 
+
+#CMD $PROJECT_WORKPLACE/app/stage/bin/vantagecircle -Dhttp.port=9000 -Dconfig.file=conf/uat.conf

@@ -1,0 +1,72 @@
+version: "3"
+services:
+    vantagecircle:
+        build:
+          context: './vc_docker'
+          dockerfile: Dockerfile_VantageCircle
+        links:
+            - db
+            - redis
+            - memcached
+            - timelinefeed
+
+        ports:
+            - 9000:9000
+        stdin_open: true
+        volumes:
+            - ./vantagecircle:/vantagecircle
+        hostname: vantagecircle
+
+    timelinefeed:
+        build:
+          context: './timeline_docker'
+          dockerfile: Dockerfile_Timelinefeed
+        links:
+          - db
+          - redis
+          - memcached
+          
+        hostname: timelinefeed
+        ports:
+          - 9010:9010
+        volumes:
+          - ./timelinefeed:/timelinefeed
+    redis:
+        image: redis
+        hostname: redis
+        ports:
+            - 6379:6379
+        volumes:
+          - redis_data:/data
+
+    db:
+        image: mysql
+        hostname: db
+        environment:
+            MYSQL_ROOT_PASSWORD: tdp_passwd
+            MYSQL_DATABASE: thedealspoint
+            MYSQL_USER: tdp_user
+            MYSQL_PASSWORD: tdp_passwd
+
+        volumes:
+          - db_data:/var/lib/mysql
+        ports:
+            - 3306:3306
+
+    memcached:
+        image: memcached
+        hostname: memcached
+        ports:
+            - 11211:11211
+volumes:
+  timelinefeed:
+  vantagecircle:
+  db_data:
+  redis_data:
+#        extra_hosts:
+#            - "vantagecircle.local:127.0.0.1"
+#            - "server-test:159.89.166.228"
+
+
+
+
