@@ -25,7 +25,7 @@ services:
           - db
           - redis
           - memcached
-          
+
         hostname: timelinefeed
         ports:
           - 9010:9010
