@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+
+data:
+
+  APP_COLOR: Blue
+  APP_MODE: Prod
+
+
+#kubectl get configmaps
+#kubectl describe configmaps
+
+
+
+#IN PODS
+
+
+envFrom:
+  - configMapRef:
+      name: app-config

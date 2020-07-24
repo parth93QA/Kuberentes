@@ -1,12 +1,30 @@
+#apiVersion: v1
+#kind: Pod
+#
+#metadata:
+#  name: myapp-pod
+#  labels:
+#    app: myapp-pod
+#    type: front-end
+#spec:
+#  containers:
+#    - name: nginx-container
+#      image: nginx
+
+
+
 apiVersion: v1
 kind: Pod
 
 metadata:
-  name: myapp-pod
+  name: webapp-color
   labels:
-    app: myapp-pod
-    type: front-end
+    name: webapp-color
+
 spec:
   containers:
-    - name: nginx-container
-      image: nginx
+    - name: webapp-container
+      image: kodekloud/webapp-color
+      env:
+        - name: APP_COLOR
+          value: green

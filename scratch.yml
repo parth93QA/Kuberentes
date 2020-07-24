@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-green
+spec:
+  containers:
+    - image: kodekloud/webapp-color
+      name: webapp-green
+      args: ["--color", "green"]
