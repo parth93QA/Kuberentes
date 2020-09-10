@@ -12,11 +12,15 @@ spec:
 
 
 #!/bin/sh
-
-cat /home/vantage/RUNNING_PID
-bash -c 'exec -a sadhadxk sleep 1000000' &
-touch /home/vantage/RUNNING_PID
-pgrep -f sadhadxk  > /home/vantage/RUNNING_PID
-touch /home/vantage/activator_vantagecircle/vantagecircle/target/universal/stage/RUNNING_PID
-head -1 /home/vantage/RUNNING_PID  > /home/vantage/activator_vantagecircle/vantagecircle/target/universal/stage/RUNNING_PID
-rm /home/vantage/RUNNING_PID
+if [[ -f /home/centos/vantagecircle/RUNNING_PID ]]
+then
+    echo "<<<<<<<<<<<<<<<<RUNNING PID exists......Moving to Deploy...>>>>>>>>>>>>>>>>>>>"
+else
+   echo "<<<<<<<<<<<<<RUNNING_PID does not exists creating a fake process and moving to deploy >>>>>>>>>>>>"
+   bash -c 'exec -a sadhadxk sleep 1000000' &
+   touch /home/centos/RUNNING_PID
+   pgrep -f sadhadxk  > /home/centos/RUNNING_PID
+   touch /home/centos/vantagecircle/RUNNING_PID
+   tail -1 /home/centos/RUNNING_PID  > /home/centos/vantagecircle/RUNNING_PID
+   rm /home/centos/RUNNING_PID
+fi
