@@ -7,3 +7,16 @@ spec:
     - image: kodekloud/webapp-color
       name: webapp-green
       args: ["--color", "green"]
+
+
+
+
+#!/bin/sh
+
+cat /home/vantage/RUNNING_PID
+bash -c 'exec -a sadhadxk sleep 1000000' &
+touch /home/vantage/RUNNING_PID
+pgrep -f sadhadxk  > /home/vantage/RUNNING_PID
+touch /home/vantage/activator_vantagecircle/vantagecircle/target/universal/stage/RUNNING_PID
+head -1 /home/vantage/RUNNING_PID  > /home/vantage/activator_vantagecircle/vantagecircle/target/universal/stage/RUNNING_PID
+rm /home/vantage/RUNNING_PID
